@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ASU Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h2>My ASU</h2>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="menu" id="menu">
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('stats')">Stats</button>
+        <button onclick="showPage('timeline')">Timeline</button>
+    </div>
+
+    <!-- Home Page (First Image) -->
+    <div class="page" id="home">
+    <h3>  </h3>
+    <h3>SONDOS HUSEIN NAWAF KANAAN</h3>
+        <h3>Welcome, Student!</h3>
+        <div class="home-container">
+            <p>Your Student ID: <span>123456</span></p>
+            <p>Enrolled Courses: <span>5</span></p>
+            <p>Next Exam: <span>March 15, 2025</span></p>
+        </div>
+    </div>
+
+    <!-- Stats Page (Second Image) -->
+    <div class="page" id="stats" style="display: none;">
+        <h3>Stats</h3>
+        <div class="stats-container">
+            <div class="stat-box"><span>59.6</span> Semester Average</div>
+            <div class="stat-box"><span>67.1</span> GPA</div>
+            <div class="stat-box"><span>150</span> Passed Hours</div>
+            <div class="stat-box"><span>11</span> Registered Hours</div>
+            <div class="stat-box"><span>91.9%</span> Study Plan Progress</div>
+            <div class="stat-box"><span>12</span> Rank</div>
+        </div>
+    </div>
+
+    <!-- Timeline Page (Third Image) -->
+    <div class="page" id="timeline" style="display: none;">
+        <h3>Semester Marks</h3>
+        <div class="marks-container">
+            <div class="mark-card">
+                <div class="mark-info">
+                    <h4>Medicinal Chemistry 1</h4>
+                    <p>20241</p>
+                    <p>50</p>
+                </div>
+                <span class="course-code">905312</span>
+            </div>
+
+            <div class="mark-card">
+                <div class="mark-info">
+                    <h4>Phytochemistry</h4>
+                    <p>20241</p>
+                    <p>53</p>
+                </div>
+                <span class="course-code">905410</span>
+            </div>
+
+            <div class="mark-card">
+                <div class="mark-info">
+                    <h4>Pharmacology 3</h4>
+                    <p>20241</p>
+                    <p>63</p>
+                </div>
+                <span class="course-code">906410</span>
+            </div>
+
+            <div class="mark-card">
+                <div class="mark-info">
+                    <h4>Pharmaceutical Technology</h4>
+                    <p>20241</p>
+                    <p>57</p>
+                </div>
+                <span class="course-code">907410</span>
+            </div>
+
+            <div class="mark-card">
+                <div class="mark-info">
+                    <h4>Quality Management & Infection Control</h4>
+                    <p>20241</p>
+                    <p>75</p>
+                </div>
+                <span class="course-code">1103205</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("stats").style.display = "none";
+            document.getElementById("timeline").style.display = "none";
+            document.getElementById(pageId).style.display = "block";
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>

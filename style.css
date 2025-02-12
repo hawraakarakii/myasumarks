@@ -1,0 +1,146 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    background-color: #00b4c5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Menu Button */
+.menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+.menu {
+    display: none;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.menu button {
+    background: #00b4c5;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+}
+
+/* Home Page */
+.home-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.home-container p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.home-container span {
+    font-weight: bold;
+    color: #00b4c5;
+}
+
+/* Stats Page */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 22px;
+    color: #00b4c5;
+    font-weight: bold;
+}
+
+/* Marks Container */
+.marks-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Mark Card */
+.mark-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Course Code */
+.course-code {
+    background-color: #e5faff;
+    color: #00b4c5;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mark-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .course-code {
+        align-self: flex-end;
+    }
+}
